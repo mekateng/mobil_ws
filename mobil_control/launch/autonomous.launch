@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<launch>
+
+
+  <node pkg="mobil_control" type="mobil_cmd_sub.py" name="mobil_cmd_sub_node"/>
+  <node pkg="mobil_control" type="odom_publisher.py" name="odom_publisher_node"/>
+  <include file="$(find bosch_imu_driver)/launch/imu.launch" />
+  <include file="$(find mobil_localization)/launch/localization.launch" />
+
+
+</launch>
+
+
